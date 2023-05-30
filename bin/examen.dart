@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:examen/examen.dart' as examen;
 
 void main(List<String> arguments) {
-  print('Hello world: ${examen.calculate()}!');
+  var linea = File('calorias.txt').readAsLinesSync();
+  var datos = linea.map((linea) => linea.trim()).toList();
+  print(datos);
+
 }
